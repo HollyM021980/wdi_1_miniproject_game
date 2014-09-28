@@ -4,9 +4,9 @@ require_relative '../character_class'
 describe CharacterClass do
 
   it "should generate a CharacterClass object" do
-    char_race = CharacterClass.new
+    char_class = CharacterClass.new
 
-    expect { char_race.should should be_an_instance_of  CharacterClass }
+    expect { char_class.should should be_an_instance_of  CharacterClass }
   end
 
 

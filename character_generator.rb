@@ -9,7 +9,7 @@ class CharacterGenerator
 
   def display_class_menu
     puts "Please enter the class for your character: "
-    CharacterClass.
+#    CharacterClass.
   end
 
   def generate_character
