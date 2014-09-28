@@ -6,23 +6,8 @@ require 'pry'
 
 # This is a hash of the classes and their attributes
 # The top level intentionally uses strings
-ALL_CLASSES =
-
-  { "Cleric" =>
-      {
-      description: "",
-      hit_die: "",
-      primary_ability: {},
-      saving_throw: {},
-      armor_wepons: {}
-      },
-    "Fighter" => {
-      },
-    "Rogue" => {
-      },
-    "Wizard" => {
-    }
-}
+# TODO: refactor this into a class as the functionality
+#   of the game expands
 
 
 class CharacterGenerator
