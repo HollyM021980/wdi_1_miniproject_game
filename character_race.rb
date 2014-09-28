@@ -4,7 +4,8 @@ require 'pry'
 # class for Dungeons and Dragons
 class CharacterRace
 
-  attr_accessor :level, :hit_points, :hit_dice
-  attr_accessor :strength, :dexterity, :constituion
-  attr_accessor :intelligence, :wisdom, :charisma
+  # These are the possible racial traits
+  attr_accessor :ability_score_increase, :age, :alignment
+  attr_accessor :size, :speed, :languages
+
 end
