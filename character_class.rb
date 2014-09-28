@@ -226,11 +226,33 @@ WEAPONS = {
       damage: { dice: "1d6", type: "piercing" },
       weight: 3,
       properties: ["Thrown", "Range 20/60", "Versitile (1d8)"]
-      },
-
+      }
     },
   "Simple Ranged Weapons" => {
-
+    light_crossbow: {
+      cost: "25 gp",
+      damage: { dice: "1d8", type: "piercing" },
+      weight: 5,
+      properties: ["Ammunition", "Range 80/320", "Loading", "Two-handed"]
+      },
+    dart: {
+      cost: "5 cp",
+      damage: { dice: "1d4", type: "piercing" },
+      weight: 0.25,
+      properties: ["Finesse", "Thrown", "Range 20/60"]
+      },
+    shortbow: {
+      cost: "25 gp",
+      damage: { dice: "1d6", type: "piercing" },
+      weight: 2,
+      properties: ["Ammunition", "Two-handed"]
+      },
+    sling: {
+      cost: "1 sp",
+      damage: { dice: "1d4", type: "bludgeoning" },
+      weight: 3,
+      properties: ["Ammunition", "Range 30/120", "Versitile (1d8)"]
+      },
     },
   "Martial Melee Weapons" => {},
   "Martial Ranged Weapons" => {},
