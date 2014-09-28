@@ -5,8 +5,8 @@ require 'pry'
 
 class CharacterClass
 
+ABILITY_DEFAULTS = {}
 CHARACTER_CLASSES =
-
   { "Cleric" => {
       description: "A priestly champion who wields divine magic in service of a higher power",
       starting_wealth: "",
