@@ -257,5 +257,15 @@ WEAPONS = {
   "Martial Melee Weapons" => {},
   "Martial Ranged Weapons" => {},
 }
+
+  # Input:  none
+  # Return: Array of class name strings
+  def assemble_class_names
+    char_names = []
+    CHARACTER_CLASSES.each_key { |key| char_names << key }
+    binding.pry
+    char_names
+  end
+
 end
 

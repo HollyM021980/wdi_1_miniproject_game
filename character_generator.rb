@@ -4,17 +4,14 @@ require 'pry'
 # display results of generating a character to the user
 # This is a hash of the classes and their attributes
 
-# This is a hash of the classes and their attributes
-# The top level intentionally uses strings
-# TODO: refactor this into a class as the functionality
-#   of the game expands
-
 
 class CharacterGenerator
 
-end
+  def display_class_menu
+  end
 
+  def generate_character
+  end
 
-def generate_character
 end
 

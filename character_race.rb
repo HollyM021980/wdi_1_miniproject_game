@@ -5,8 +5,8 @@ require 'pry'
 class CharacterRace
 
   # These are the possible racial traits
-  attr_accessor :name, :gender, :age, :size
-  attr_accessor :ability_score_increase
+  attr_accessor :name, :gender, :age
+  attr_accessor :weapons, :armor
 
 
 end

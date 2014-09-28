@@ -6,7 +6,9 @@ describe CharacterClass do
   it "should generate a CharacterClass object" do
     char_race = CharacterClass.new
 
-    expect { char_race.should be_a CharacterClass }
+    expect { char_race.should should be_an_instance_of  CharacterClass }
   end
+
+
 
 end
