@@ -49,32 +49,114 @@ ARMOR = {
   "Light Armor" => {
       padded: {
         description: "",
-        cost: "",
-        armor_class: {},
+        cost: "5 gp",
+        armor_class: {initial: 11, modifier: "dexterity", max: nil},
+        strength: "",
+        stealth: "Disadvantage",
+        weight: 8
+        },
+      leather: {
+        description: "",
+        cost: "10 gp",
+        armor_class: {initial: 11, modifier: "dexterity", max: nil},
         strength: "",
         stealth: "",
-        weight: 0
+        weight: 10
         },
-      leather: {},
-      studed_leather: {}
+      studed_leather: {
+        description: "",
+        cost: "45 gp",
+        armor_class: {initial: 12, modifier: "dexterity", max: nil},
+        strength: "",
+        stealth: "",
+        weight: 13
+      }
     },
   "Medium Armor" => {
-      hide: {},
-      chain_shirt: {},
-      scale_mail: {},
-      breast_plate: {},
-      half_plate: {}
+      hide: {
+        description: "",
+        cost: "10 gp",
+        armor_class: {initial: 11, modifier: "dexterity", max: 2},
+        strength: "",
+        stealth: "",
+        weight: 12
+        },
+      chain_shirt: {
+        description: "",
+        cost: "50 gp",
+        armor_class: {initial: 13, modifier: "dexterity", max: 2},
+        strength: "",
+        stealth: "",
+        weight: 20
+        },
+      scale_mail: {
+        description: "",
+        cost: "50 gp",
+        armor_class: {initial: 14, modifier: "dexterity", max: 2},
+        strength: "",
+        stealth: "Disadvantage",
+        weight: 45
+        },
+      breast_plate: {
+        description: "",
+        cost: "400 gp",
+        armor_class: {initial: 14, modifier: "dexterity", max: 2},
+        strength: "",
+        stealth: "",
+        weight: 20
+        },
+      half_plate: {
+        description: "",
+        cost: "750 gp",
+        armor_class: {initial: 14, modifier: "dexterity", max: 2},
+        strength: "",
+        stealth: "Disadvantage",
+        weight: 40
+      }
     },
   "Heavy Armor" => {
-      ring_mail: {},
-      chain_mail: {},
-      splint: {},
-      plate: {}
+      ring_mail: {
+        description: "",
+        cost: "30 gp",
+        armor_class: {initial: 14, modifier: "", max: nil},
+        strength: "",
+        stealth: "Disadvantage",
+        weight: 45
+        },
+      chain_mail: {
+        description: "",
+        cost: "75 gp",
+        armor_class: {initial: 16, modifier: "", max: nil},
+        strength: "Str 13",
+        stealth: "Disadvantage",
+        weight: 55
+        },
+      splint: {
+        description: "",
+        cost: "200 gp",
+        armor_class: {initial: 17, modifier: "", max: nil},
+        strength: "Str 15",
+        stealth: "Disadvantage",
+        weight: 60
+        },
+      plate: {
+        description: "",
+        cost: "1500 gp",
+        armor_class: {initial: 18, modifier: "", max: nil},
+        strength: "Str 15",
+        stealth: "Disadvantage",
+        weight: 65
+
+      }
     },
   "Shield" => {
-
+        description: "",
+        cost: "10 gp",
+        armor_class: {initial: 2, modifier: "+", max: nil},
+        strength: "",
+        stealth: "",
+        weight: 6
   }
 }
-
 end
 
