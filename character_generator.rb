@@ -9,6 +9,23 @@ require_relative 'character_race'
 
 class CharacterGenerator
 
+  # This generates a generic menu string to display to the user
+  # Input: Array of names, String specifying "race" or "class"
+  # Return: String for display
+  def gen_menu_str(type, names)
+    #TODO: need some error checking on type & names
+    names_str = ""
+    # names_str = names.each_with_object(Array.new(0)) { |name, name_str| names_str << name << ", " }
+
+    names_str = names.map { |name, name_str| names_str << name << ", " }
+    # binding.pry
+    menu_str = "\nPlease enter the #{type} for your character: "
+    menu_str += "\n(#{names_str})"
+    menu_str += "\nOr enter 'quit' to exit"
+    menu_str += "\n==> "
+    menu_str
+  end
+
   # Display a menu string and get the character class
   #   the user wants for their character.
   # Will exit the program if the user enters "quit"
@@ -27,20 +44,6 @@ class CharacterGenerator
       time_to_exit = true if names.include?(class_name)
     end until time_to_exit
     return class_name
-  end
-
-  # This generates a generic menu string to display to the user
-  # Input: Array of names, String specifying "race" or "class"
-  # Return: String for display
-  def gen_menu_str(type, names)
-    #TODO: need some error checking on type & names
-    names_str = ""
-    names_str = names.each { |name| names_str << "#{name} " }
-    menu_str = "\nPlease enter the #{type} for your character: "
-    menu_str += "\n(#{names_str})"
-    menu_str += "\nOr enter 'quit' to exit"
-    menu_str += "\n==> "
-    menu_str
   end
 
 
