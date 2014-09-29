@@ -17,7 +17,13 @@ class CharacterRace
   # Return: Array of class name strings
   def assemble_race_names
     race_names = []
-    RACES.each_key { |key| race_names << key }
+    RACES.each_key do | key |
+      if RACES[key][:subraces].empty?
+        race_names << key
+      else
+        RACES[key][:subraces].each { |subrace| race_names << subrace }
+      end
+    end
     race_names
   end
 

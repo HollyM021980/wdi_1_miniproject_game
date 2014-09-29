@@ -1,6 +1,8 @@
 require 'pry'
 require_relative 'character_class'
 require_relative 'character_race'
+require_relative 'dwarf'
+require_relative 'hill_dwarf'
 
 # This class will be the main logic to get user input
 # display results of generating a character to the user
@@ -14,15 +16,12 @@ class CharacterGenerator
   # Return: String for display
   def gen_menu_str(type, names)
     #TODO: need some error checking on type & names
+    menu_str = "\nPlease enter the #{type} for your character: ("
     names_str = ""
-    # names_str = names.each_with_object(Array.new(0)) { |name, name_str| names_str << name << ", " }
-
-    names_str = names.map { |name, name_str| names_str << name << ", " }
-    # binding.pry
-    menu_str = "\nPlease enter the #{type} for your character: "
-    menu_str += "\n(#{names_str})"
-    menu_str += "\nOr enter 'quit' to exit"
-    menu_str += "\n==> "
+    names.each { | name | names_str.empty? ? names_str << name : names_str << ", " << name }
+    menu_str << names_str << ")"
+    menu_str << "\nOr enter 'quit' to exit"
+    menu_str << "\n==> "
     menu_str
   end
 
@@ -67,14 +66,25 @@ class CharacterGenerator
     return race_name
   end
 
+  # Builds initial character object
+  # Input: two strings
+  # Ouput: object representing the character race or nil if not known
+  def initiate_character(race, char_class)
+    return HillDwarf.new(race, char_class) if race == "Hill Dwarf"
+    nil
+  end
+
   # Main functionality to generate a character
   # Input: none
   # Return: none.  Simply creates character objects.
   def generate_character
     char_class = select_character_class
-    puts "\n\nCool!! For class, you've chosen: #{char_class}\n\n"
     char_race = select_character_race
-    puts "\nCongratulations!! For race, you've chosen: #{char_race}\n\n"
+    character = initiate_character(char_race, char_class)
+    # character.name_menu
+    puts "\nCongratulations!!"
+    puts "*** For class, you've chosen: #{char_class}"
+    puts "*** For race, you've chosen: #{char_race}"
   end
 end
 

@@ -9,4 +9,26 @@ CLAN_NAMES = ["Balderk", "Battlehammer", "Brawnanvil", "Dankil", "Fireforge", "F
 
 class Dwarf < CharacterRace
 
+  # Set instance variables
+  # Input: two Strings
+  # Output: nil
+  def initialize(race, char_class)
+    @race = race
+    @char_class = char_class
+  end
+
+  #
+  def name_menu
+    menu_str = "Please enter a name for your dwarf. Lots of options here!!"
+    menu_str = "Female Names:\n"
+    names_str = ""
+    names.each { | name | names_str.empty? ? names_str << name : names_str << ", " << name }
+    menu_str << names_str << ")"
+    menu_str = "Male Names:\n"
+    names_str = ""
+    names.each { | name | names_str.empty? ? names_str << name : names_str << ", " << name }
+    menu_str << names_str << ")"
+    binding.pry
+    menu_str
+  end
 end
