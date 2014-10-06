@@ -16,6 +16,7 @@ class CharacterGenerator
   # Return: String for display
   def gen_menu_str(type, names)
     #TODO: need some error checking on type & names
+    # binding.pry
     menu_str = "\nPlease enter the #{type} for your character: ("
     names_str = ""
     names.each { | name | names_str.empty? ? names_str << name : names_str << ", " << name }
@@ -31,6 +32,7 @@ class CharacterGenerator
   # Input: none
   # Return: String containing character class
   def select_character_class
+    # binding.pry
     char_classes = CharacterClass.new
     names = char_classes.assemble_class_names
     menu_str = gen_menu_str("class", names)
@@ -38,7 +40,7 @@ class CharacterGenerator
     #TODO: need to add validation
     begin
       puts menu_str
-      class_name = gets.chomp
+      class_name = STDIN.gets.chomp
       exit if class_name == "quit"
       time_to_exit = true if names.include?(class_name)
     end until time_to_exit
@@ -59,7 +61,7 @@ class CharacterGenerator
     #TODO: need to add validation
     begin
       print menu_str
-      race_name = gets.chomp
+      race_name = STDIN.gets.chomp
       exit if race_name == "quit"
       time_to_exit = true if names.include?(race_name)
     end until time_to_exit

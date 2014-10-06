@@ -6,6 +6,8 @@ require 'pry'
 class CharacterClass
 
   ABILITY_DEFAULTS = {}
+
+  # The keys represent the character class name
   CHARACTER_CLASSES =
     { "Cleric" => {
         description: "A priestly champion who wields divine magic in service of a higher power.",
@@ -261,9 +263,7 @@ class CharacterClass
   # Input:  none
   # Return: Array of class name strings
   def assemble_class_names
-    char_names = []
-    CHARACTER_CLASSES.each_key { |key| char_names << key }
-    char_names
+    CHARACTER_CLASSES.keys
   end
 
 end

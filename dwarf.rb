@@ -28,7 +28,7 @@ class Dwarf < CharacterRace
     names_str = ""
     names.each { | name | names_str.empty? ? names_str << name : names_str << ", " << name }
     menu_str << names_str << ")"
-    binding.pry
+    # binding.pry
     menu_str
   end
 end
